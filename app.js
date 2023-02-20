@@ -11,9 +11,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-app.get('/', (req, res) => {
-    res.send('Hello, world!');
-  });
 app.all("*", (req, res) => {
   const { url, method, headers, body } = req;
   const options = {
